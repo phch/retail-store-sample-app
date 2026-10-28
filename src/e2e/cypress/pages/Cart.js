@@ -14,6 +14,14 @@ class Cart extends Page {
     return cy.get(".cart-subtotal");
   }
 
+  empty() {
+    return cy.get("#cart-empty");
+  }
+
+  continueShopping() {
+    return cy.get("#cart-continue");
+  }
+
   checkout() {
     return cy.get("#checkout");
   }

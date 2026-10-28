@@ -4,6 +4,15 @@ import Product from "../pages/Product";
 const cart = new Cart();
 const product = new Product("d27cf49f-b689-4a75-a249-d373e0330bb5");
 
+describe("testing empty cart", () => {
+  it("should show empty message and link to catalog", () => {
+    cart.visit();
+
+    cart.empty().should("be.visible");
+    cart.continueShopping().should("have.attr", "href", "/catalog");
+  });
+});
+
 describe("testing cart", () => {
   beforeEach(() => {
     product.visit();
