@@ -64,3 +64,11 @@ To clean up:
 ```
 docker compose down
 ```
+
+## Running tests
+
+Run the unit tests from the repository root:
+
+```
+yarn nx test checkout
+```
