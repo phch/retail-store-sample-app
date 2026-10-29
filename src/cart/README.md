@@ -64,3 +64,18 @@ To clean up:
 ```
 docker compose down
 ```
+
+## Running tests
+
+Run these from the repository root:
+
+```
+# Unit tests
+yarn nx test cart
+
+# Integration tests (requires Docker)
+yarn nx test:integration cart
+
+# Lint
+yarn nx lint cart
+```
