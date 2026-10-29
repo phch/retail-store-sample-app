@@ -67,8 +67,18 @@ docker compose down
 
 ## Running tests
 
-Run the unit tests from the repository root:
+Run these commands from the repository root.
+
+The unit test target is:
 
 ```
 yarn nx test checkout
+```
+
+The checkout service has no unit specs yet, so this target builds the service and runs no tests.
+
+The tests that exercise the service are the integration tests in `test/`. They start a Redis container with Testcontainers, so Docker must be running:
+
+```
+yarn nx test:integration checkout
 ```
