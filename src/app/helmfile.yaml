@@ -11,6 +11,8 @@ releases:
             provider: mysql
         mysql:
           create: true
+          image:
+            repository: mysql
 
   - name: "carts"
     namespace: "default"
@@ -24,6 +26,8 @@ releases:
             provider: dynamodb
         dynamodb:
           create: true
+          image:
+            repository: amazon/dynamodb-local
 
   - name: "orders"
     namespace: "default"
@@ -39,8 +43,12 @@ releases:
             provider: rabbitmq
         postgresql:
           create: true
+          image:
+            repository: postgres
         rabbitmq:
           create: true
+          image:
+            repository: rabbitmq
 
   - name: "checkout"
     namespace: "default"
