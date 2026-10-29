@@ -14,8 +14,14 @@
         <!-- Cart Items -->
         <div class="w-full" id="basket">
           <!-- Cart Item -->
-          <div th:if="${fullCart.items.size() == 0}">
-            You don't have any items!
+          <div id="cart-empty" th:if="${fullCart.items.size() == 0}">
+            <p th:text="#{shoppingcart.empty}"></p>
+            <a
+              id="cart-continue"
+              th:href="@{/catalog}"
+              class="inline-block bg-primary-500 hover:bg-primary-700 text-white rounded-lg px-6 py-3 mt-6"
+              th:text="#{shoppingcart.continue}"
+            ></a>
           </div>
           <div th:if="${fullCart.items.size() > 0}">
             <div
